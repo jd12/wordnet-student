@@ -1,32 +1,61 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
+import org.junit.Before;
 import org.junit.Test;
 
+import edu.princeton.cs.algs4.Digraph;
+import edu.princeton.cs.algs4.In;
+
 public class SAPTest {
+  
+  private SAP sapDigraph1;
+  @Before
+  public void setup() {
+    In in = new In("wordnet-test-files/digraph1.txt");
+    Digraph G = new Digraph(in);
+    System.out.println(G);
+    sapDigraph1 = new SAP(G);
+  }
 
   @Test
-  public void testSAP() {
+  public void testSAPImmutable() {
     fail("Not yet implemented");
   }
 
   @Test
   public void testLengthIntInt() {
-    fail("Not yet implemented");
+    assertEquals(4, sapDigraph1.length(3, 11));
   }
 
   @Test
   public void testAncestorIntInt() {
-    fail("Not yet implemented");
+    assertEquals(1, sapDigraph1.ancestor(3, 11));
   }
 
   @Test
   public void testLengthIterableIterable() {
-    fail("Not yet implemented");
+    ArrayList<Integer> verticesV = new ArrayList<Integer>();
+    verticesV.add(7);
+    verticesV.add(4);
+    verticesV.add(9);
+    ArrayList<Integer> verticesW = new ArrayList<Integer>();
+    verticesW.add(11);
+    verticesW.add(2);
+    assertEquals(3,sapDigraph1.length(verticesV, verticesW));
   }
 
   @Test
   public void testAncestorIterableIterable() {
-    fail("Not yet implemented");
+    ArrayList<Integer> verticesV = new ArrayList<Integer>();
+    verticesV.add(7);
+    verticesV.add(4);
+    verticesV.add(9);
+    ArrayList<Integer> verticesW = new ArrayList<Integer>();
+    verticesW.add(11);
+    verticesW.add(2);
+    assertEquals(5, sapDigraph1.ancestor(verticesV, verticesW));
   }
 
 }
