@@ -9,7 +9,7 @@ import edu.princeton.cs.algs4.Digraph;
 import edu.princeton.cs.algs4.In;
 
 public class SAPTest {
-  
+
   private SAP sapDigraph1;
   @Before
   public void setup() {
@@ -29,10 +29,16 @@ public class SAPTest {
     assertEquals(4, sapDigraph1.length(3, 11));
   }
 
+  //TODO: Write a testLengthIntInt test case for 
+  //      digraph-ambiguous-ancestor.txt and another digraph of your choice
+
   @Test
   public void testAncestorIntInt() {
     assertEquals(1, sapDigraph1.ancestor(3, 11));
   }
+
+  //TODO: Write a testAncestorIntInt test case for 
+  //      digraph-ambiguous-ancestor.txt and another digraph of your choice
 
   @Test
   public void testLengthIterableIterable() {
@@ -46,6 +52,9 @@ public class SAPTest {
     assertEquals(3,sapDigraph1.length(verticesV, verticesW));
   }
 
+  //TODO: Write a testLengthIterableIterable test case for 
+  //      digraph-ambiguous-ancestor.txt and another digraph of your choice
+
   @Test
   public void testAncestorIterableIterable() {
     ArrayList<Integer> verticesV = new ArrayList<Integer>();
@@ -57,5 +66,8 @@ public class SAPTest {
     verticesW.add(2);
     assertEquals(5, sapDigraph1.ancestor(verticesV, verticesW));
   }
+
+  //TODO: Write a testAncestorIterableIterable test case for 
+  //      digraph-ambiguous-ancestor.txt and another digraph of your choice
 
 }

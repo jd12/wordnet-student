@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,10 +30,10 @@ public class WordNetTest {
 
   @Test
   public void testNouns() {
-    String[] expectedNouns = {"a", "b", "c", "d", "e", "f"};
-    int index = 0;
+    String[] expectedNounsArray = {"a", "b", "c", "d", "e", "f"};
+    ArrayList<String> expectedNouns = new ArrayList<String>(Arrays.asList(expectedNounsArray));
     for(String actualNoun: wordNet6TwoAncestors.nouns()) {
-      assertEquals(expectedNouns[index], actualNoun);
+      assertTrue(expectedNouns.contains(actualNoun));
     }
   }
   
