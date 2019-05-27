@@ -70,6 +70,7 @@ An *ancestral path* between two vertices *v* and *w* in a digraph is a directed 
 We generalize the notion of shortest common ancestor to *subsets* of vertices. A shortest ancestral path of two subsets of vertices *A* and *B* is a shortest ancestral path over all pairs of vertices *v* and *w*, with *v* in *A* and *w* in *B*. The figure ([digraph25.txt](http://coursera.cs.princeton.edu/algs4/testing/wordnet/digraph25.txt)) below shows an example in which, for two subsets, red and blue, we have computed several (but not all) ancestral paths, including the shortest one.
 
 
+![WordNet SCA Set](./images/wordnet-sca-set.png)
 
 ## SAP data type 
 
